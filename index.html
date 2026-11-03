@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- version_5: at-a-glance summary added to hero -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -200,6 +201,19 @@ a.cta:hover{filter:brightness(1.08);transform:translateY(-1.5px);box-shadow:0 6p
 @media(max-width:560px){
   .hero p.bio{font-size:16.5px}
 }
+
+/* at-a-glance facts: the 60-second read for recruiters */
+.glance{
+  display:grid;grid-template-columns:repeat(2,1fr);column-gap:28px;margin:6px 0 0;
+  border-top:1px solid var(--on-panel-line);
+}
+.glance > div{padding:13px 0;border-bottom:1px solid var(--on-panel-line)}
+.glance dt{
+  font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:#7DE0DC;margin:0 0 4px;
+}
+.glance dd{margin:0;font-size:14.5px;line-height:1.5;color:var(--on-panel)}
+@media(max-width:560px){.glance{grid-template-columns:1fr}}
 
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-bottom:clamp(40px,7vw,60px)}
 .metric{
@@ -457,6 +471,8 @@ footer p{font-size:12.5px;color:var(--muted)}
   section{padding-block:12pt;border-top:1px solid #ccc;break-inside:avoid}
   .role-item,.card,.skill-group{break-inside:avoid}
   .contact-panel{border:1px solid #ccc}
+  .glance dt{color:#444!important}
+  .glance dd{color:#000!important}
   a{color:#000}
   .js .reveal,.js .reveal .role-body li,.js .skill-group .tags span{opacity:1!important;transform:none!important}
   .line::after,.skill-group::before{transform:scaleY(1)!important}
@@ -492,6 +508,12 @@ footer p{font-size:12.5px;color:var(--muted)}
             <p class="role">Senior Backend &amp; Cloud Engineer · Technical Lead</p>
           </div>
           <p class="bio rise r2">I design and deliver <strong>enterprise-grade systems</strong> — cloud migrations, API platforms, and microservices on Azure and AWS. Thirteen years across insurance, banking, retail, and government, most recently leading application development at <strong>Prudential Hong Kong</strong>. Now based in Metro Vancouver.</p>
+          <dl class="glance rise r3">
+            <div><dt>Current role</dt><dd>Application Developer Lead, Prudential Hong Kong (Dec 2022 – present)</dd></div>
+            <div><dt>Experience</dt><dd>13+ years across insurance, banking, retail and government</dd></div>
+            <div><dt>Core stack</dt><dd>Java · Spring · Azure AKS &amp; APIM · AWS EKS · Kubernetes · Terraform</dd></div>
+            <div><dt>Open to</dt><dd>Senior backend, cloud, platform and lead roles · Hybrid, Metro Vancouver</dd></div>
+          </dl>
           <div class="links rise r3">
             <a id="email-link" href="#">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
