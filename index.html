@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version_7: 60-second skim path — career-path strip under the hero, so the full arc reads in one line -->
+<!-- version_8: 60-second skim — availability status in the nav, plus a caption on the career-path strip so the arc is labelled at a glance -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -148,6 +148,18 @@ p{margin:0;max-width:66ch}
 }
 .nav.stuck .progress{opacity:1}
 
+/* availability status — visible from the first screen, so a recruiter sees it while scrolling */
+.nav-status{
+  display:inline-flex;align-items:center;gap:7px;margin-left:18px;margin-right:auto;
+  font-size:12px;font-weight:500;color:#8DEBD6;white-space:nowrap;
+  transition:color .35s ease;
+}
+.nav-status .dot{width:6px;height:6px;border-radius:50%;background:#2DD4BF;flex:0 0 auto}
+.js .nav-status .dot{animation:pulse 2.4s ease-in-out infinite}
+.nav.stuck .nav-status{color:var(--teal)}
+.nav.stuck .nav-status .dot{background:var(--teal)}
+@media(max-width:760px){ .nav-status{display:none} }
+
 a.cta{
   background:linear-gradient(135deg,#0D9488,#3B5BD9);
   color:#FFFFFF !important;
@@ -234,8 +246,12 @@ a.cta:hover{filter:brightness(1.08);transform:translateY(-1.5px);box-shadow:0 6p
 @media(max-width:360px){.metrics{grid-template-columns:1fr}}
 
 /* career path: the whole arc in one line, so the sequence reads at a glance */
+.journey-cap{
+  font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--on-panel-2);margin:0 0 10px;
+}
 .journey{
-  display:grid;grid-template-columns:repeat(5,1fr);gap:10px;
+display:grid;grid-template-columns:repeat(5,1fr);gap:10px;
   padding-bottom:14px;
 }
 .journey a{
@@ -520,6 +536,7 @@ footer p{font-size:12.5px;color:var(--muted)}
 <nav class="nav" id="nav">
   <div class="shell nav-in">
     <span class="nav-mark">Andy&nbsp;Lau</span>
+    <span class="nav-status"><span class="dot" aria-hidden="true"></span>Available now · Hybrid, Metro Vancouver</span>
     <div class="nav-links">
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -566,6 +583,7 @@ footer p{font-size:12.5px;color:var(--muted)}
     </header>
 
     <div class="shell">
+      <p class="journey-cap rise r4">Career path · 2010 to today</p>
       <nav class="journey rise r4" aria-label="Career path">
         <a href="#experience" style="--jh:#55C692">
           <span class="yr">2010 – 2014</span>
