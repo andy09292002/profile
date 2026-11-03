@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version_5: at-a-glance summary added to hero -->
+<!-- version_6: 60-second skim path — per-role highlight chips, scannable role headers -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -297,6 +297,14 @@ html:not(.js) .line::after{transform:scaleY(1)}
   border-color:color-mix(in srgb,var(--hue) 26%,transparent);
   padding:3px 9px;border-radius:100px;white-space:nowrap;
 }
+/* skim path: one-line highlights per role, drawn from that role's own bullets */
+.role-hl{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.role-hl span{
+  font-size:12px;font-weight:500;line-height:1.4;color:var(--hue);
+  background:color-mix(in srgb,var(--hue) 10%,var(--surface));
+  border:1px solid color-mix(in srgb,var(--hue) 24%,transparent);
+  padding:3px 9px;border-radius:100px;white-space:nowrap;
+}
 .role-body ul{margin:4px 0 0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
 .role-body li{font-size:14.5px;line-height:1.62;color:var(--ink-2)}
 .role-body li::marker{color:var(--hue)}
@@ -580,6 +588,9 @@ footer p{font-size:12.5px;color:var(--muted)}
             <p class="role-org">Prudential Hong Kong Limited</p>
             <span class="sector">Insurance</span>
           </div>
+          <div class="role-hl" aria-label="Highlights">
+            <span>Cloud migration</span><span>Generative AI</span><span>99.99% uptime</span><span>Team of 10+</span>
+          </div>
           <ul>
             <li>Led the cloud migration of on-premises IBM MQ service bus infrastructure, moving <span class="k">30+</span> upstream caller systems transparently with no business impact and sunsetting the on-premises estate.</li>
             <li>Delivered an Azure OpenAI generative-AI chatbot using the Assistants API and function calling — owning scope, budget, timeline, and risk. The on-time MVP cut agent enquiries by <span class="k">80%</span> and reduced resolution time from <span class="k">1.5 days to 15 minutes</span>.</li>
@@ -607,6 +618,9 @@ footer p{font-size:12.5px;color:var(--muted)}
             <p class="role-org">Automated Solutions Limited</p>
             <span class="sector">Banking &amp; Government</span>
           </div>
+          <div class="role-hl" aria-label="Highlights">
+            <span>Team of 20+</span><span>e-KYC automation</span><span>Core banking APIs</span>
+          </div>
           <ul>
             <li>Led a <span class="k">20+</span> member development team across full system life cycles for banking (CITIC Bank International) and government clients.</li>
             <li>Rebuilt the digital e-KYC process for prospective banking customers, automating it and integrating with the core banking system via APIs — cutting the timeline from <span class="k">one week to one hour</span>.</li>
@@ -631,6 +645,9 @@ footer p{font-size:12.5px;color:var(--muted)}
             <p class="role-org">AS Watson Group</p>
             <span class="sector">Retail</span>
           </div>
+          <div class="role-hl" aria-label="Highlights">
+            <span>Multi-channel chatbot</span><span>AWS EKS</span><span>+200% engagement</span>
+          </div>
           <ul>
             <li>Designed and deployed a multi-channel chatbot on Node.js, AWS EKS, and IBM Watson — integrated with Facebook Messenger, LINE, and Zendesk — increasing customer engagement by <span class="k">200%</span>.</li>
             <li>Built a CMS letting business users manage chatbot intents directly and generate KPI reporting for senior management.</li>
@@ -653,6 +670,9 @@ footer p{font-size:12.5px;color:var(--muted)}
           <div class="role-top">
             <p class="role-org">AIA Pension and Trustee Co. Ltd</p>
             <span class="sector">Insurance</span>
+          </div>
+          <div class="role-hl" aria-label="Highlights">
+            <span>Spring MVC migration</span><span>REST APIs</span><span>SOX audit support</span>
           </div>
           <ul>
             <li>Migrated customer portals from Struts2/EJB to Spring MVC, halving load time and enabling a service-oriented architecture for core insurance system integration.</li>
@@ -677,6 +697,9 @@ footer p{font-size:12.5px;color:var(--muted)}
           <div class="role-top">
             <p class="role-org">PCCW Solutions · Chinese Estate Holdings</p>
             <span class="sector">Government &amp; Real Estate</span>
+          </div>
+          <div class="role-hl" aria-label="Highlights">
+            <span>Spring MVC</span><span>ASP.NET</span><span>MSSQL</span>
           </div>
           <ul>
             <li>Converted a distributed desktop government system into a web platform on Spring MVC and MSSQL, reducing effort in case transfer and handler switching by <span class="k">80%</span>.</li>
