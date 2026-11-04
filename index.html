@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- version_36: back-to-overview link in each section header, so a recruiter who jumps to a section can return to the quick route in one tap -->
 <!-- version_35: recruiter quick route — four numbered links (latest role, technical depth, side work, contact) under the career path so a recruiter can reach the key evidence within a minute -->
 <!-- version_34: nav section links show item counts (Experience 6, Skills 8, Projects 4), so a recruiter sees how much each section holds before scrolling -->
 <!-- version_33:skim navigation — career-path cards jump to their own role, the brand mark returns to the top, and the experience intro explains how to skim -->
@@ -349,6 +350,14 @@ section + section{border-top:1px solid var(--line)}
 html:not(.js) .sec-head .label::before{width:24px}
 .sec-head p{font-size:15.5px;color:var(--muted)}
 
+/* back to the quick route: a way out of any section for someone skimming */
+.back-top{
+  display:inline-flex;align-items:center;gap:6px;width:fit-content;
+  font-size:12.5px;font-weight:500;color:var(--muted);
+  transition:color .2s ease;
+}
+.back-top:hover{color:var(--hue)}
+
 /* ---- experience: a timeline, because the sequence is the point ---- */
 .role-item{
   display:grid;grid-template-columns:124px 42px 1fr;column-gap:18px;
@@ -568,7 +577,7 @@ footer p{font-size:12.5px;color:var(--muted)}
    7. PRINT
    ============================================================ */
 @media print{
-  .nav,.links,.cta,footer,.avail,.progress,.journey,.route{display:none!important}
+  .nav,.links,.cta,footer,.avail,.progress,.journey,.route,.back-top{display:none!important}
   body{background:#fff;color:#000;font-size:10.5pt}
   .panel,.panel::before{background:#fff!important;color:#000!important}
   .panel::after{display:none}
@@ -675,7 +684,7 @@ footer p{font-size:12.5px;color:var(--muted)}
           <span class="rl">Application Developer Lead</span>
         </a>
       </nav>
-      <nav class="route rise r4" aria-label="Quick route for recruiters">
+      <nav class="route rise r4" id="quick-route" aria-label="Quick route for recruiters">
         <p class="route-cap">Quick route · about 60 seconds</p>
         <div class="route-steps">
           <a href="#role-prudential"><span class="step">1</span><span class="st">Latest role</span><span class="sd">Prudential Hong Kong: cloud migration and delivery results</span></a>
@@ -711,6 +720,7 @@ footer p{font-size:12.5px;color:var(--muted)}
       <p class="label">Experience</p>
       <h2>Thirteen years building systems that had to stay up</h2>
       <p>Selected work, newest first. Click any role in the career path above to jump straight to it. Full history on request or on LinkedIn.</p>
+      <a class="back-top" href="#quick-route">&larr; Back to quick route</a>
     </div>
 
     <div class="roles">
@@ -883,6 +893,7 @@ footer p{font-size:12.5px;color:var(--muted)}
       <p class="label">Capabilities</p>
       <h2>Technical depth</h2>
       <p>Java and the Azure platform are where I go deepest; the rest is what thirteen years in enterprise environments accumulates.</p>
+      <a class="back-top" href="#quick-route">&larr; Back to quick route</a>
     </div>
 
     <div class="skills">
@@ -934,6 +945,7 @@ footer p{font-size:12.5px;color:var(--muted)}
       <p class="label">Side work</p>
       <h2>Personal projects</h2>
       <p>Open source on GitHub — where I try out the tools I don't get to use at work.</p>
+      <a class="back-top" href="#quick-route">&larr; Back to quick route</a>
     </div>
 
     <div class="cards">
@@ -970,6 +982,7 @@ footer p{font-size:12.5px;color:var(--muted)}
     <div class="sec-head reveal">
       <p class="label">Background</p>
       <h2>Education, certifications &amp; community</h2>
+      <a class="back-top" href="#quick-route">&larr; Back to quick route</a>
     </div>
 
     <div class="pair">
