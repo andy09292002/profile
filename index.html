@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- version_33: skim navigation — career-path cards jump to their own role, the brand mark returns to the top, and the experience intro explains how to skim -->
+<!-- version_34: nav section links show item counts (Experience 6, Skills 8, Projects 4), so a recruiter sees how much each section holds before scrolling -->
+<!-- version_33:skim navigation — career-path cards jump to their own role, the brand mark returns to the top, and the experience intro explains how to skim -->
 <!-- version_32: hero summary now mentions generative-AI features and the RAG-based GPT-4o chatbot -->
 <!-- version_31: added Claude Code to the Online Price Scanner project tags -->
 <!-- version_30: added Claude Code to the Local LangChain Document Chatbot project tags -->
@@ -151,6 +152,11 @@ p{margin:0;max-width:66ch}
 }
 .nav-links a:hover{color:var(--on-panel);background:rgba(255,255,255,.09)}
 .nav-links a.active{color:var(--on-panel);background:rgba(255,255,255,.13)}
+/* item counts beside section links: how much each section holds, at a glance */
+.nav-links a .n{
+  margin-left:5px;font-size:11px;font-weight:600;opacity:.72;
+  font-variant-numeric:tabular-nums;
+}
 
 .nav.stuck{
   background:color-mix(in srgb,var(--ground) 86%,transparent);
@@ -569,9 +575,9 @@ footer p{font-size:12.5px;color:var(--muted)}
     <a class="nav-mark" href="#top">Andy&nbsp;Lau</a>
     <span class="nav-status"><span class="dot" aria-hidden="true"></span>Available now · Hybrid, Metro Vancouver</span>
     <div class="nav-links">
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#experience" title="6 roles">Experience <span class="n" aria-label="6 roles">6</span></a>
+      <a href="#skills" title="8 skill areas">Skills <span class="n" aria-label="8 skill areas">8</span></a>
+      <a href="#projects" title="4 personal projects">Projects <span class="n" aria-label="4 personal projects">4</span></a>
       <a href="#background">Background</a>
       <a href="#contact" class="cta">Get in touch</a>
     </div>
