@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- version_33: skim navigation — career-path cards jump to their own role, the brand mark returns to the top, and the experience intro explains how to skim -->
 <!-- version_32: hero summary now mentions generative-AI features and the RAG-based GPT-4o chatbot -->
 <!-- version_31: added Claude Code to the Online Price Scanner project tags -->
 <!-- version_30: added Claude Code to the Local LangChain Document Chatbot project tags -->
@@ -326,6 +327,7 @@ html:not(.js) .sec-head .label::before{width:24px}
   padding-bottom:34px;
 }
 .role-item:last-child{padding-bottom:0}
+.role-item{scroll-margin-top:calc(var(--navh) + 18px)}
 .role-meta{display:flex;flex-direction:column;gap:4px;text-align:right;padding-top:11px}
 .role-date{font-size:12.5px;font-weight:600;color:var(--ink-2);font-variant-numeric:tabular-nums}
 .role-place{font-size:12.5px;color:var(--muted);line-height:1.45}
@@ -559,12 +561,12 @@ footer p{font-size:12.5px;color:var(--muted)}
 }
 </style>
 </head>
-<body>
+<body id="top">
 <script>document.documentElement.classList.add('js');</script>
 
 <nav class="nav" id="nav">
   <div class="shell nav-in">
-    <span class="nav-mark">Andy&nbsp;Lau</span>
+    <a class="nav-mark" href="#top">Andy&nbsp;Lau</a>
     <span class="nav-status"><span class="dot" aria-hidden="true"></span>Available now · Hybrid, Metro Vancouver</span>
     <div class="nav-links">
       <a href="#experience">Experience</a>
@@ -614,32 +616,32 @@ footer p{font-size:12.5px;color:var(--muted)}
     <div class="shell">
       <p class="journey-cap rise r4">Career path · 2010 to today</p>
       <nav class="journey rise r4" aria-label="Career path">
-        <a href="#experience" style="--jh:#5FC2E0">
+        <a href="#role-cehl" style="--jh:#5FC2E0">
           <span class="yr">2010 – 2012</span>
           <span class="co">Chinese Estate Holdings</span>
           <span class="rl">Developer</span>
         </a>
-        <a href="#experience" style="--jh:#55C692">
+        <a href="#role-pccw" style="--jh:#55C692">
           <span class="yr">2012 – 2014</span>
           <span class="co">PCCW Solutions</span>
           <span class="rl">Developer</span>
         </a>
-        <a href="#experience" style="--jh:#F085AB">
+        <a href="#role-aia" style="--jh:#F085AB">
           <span class="yr">2014 – 2018</span>
           <span class="co">AIA</span>
           <span class="rl">Analyst, portals &amp; apps</span>
         </a>
-        <a href="#experience" style="--jh:#DFA450">
+        <a href="#role-aswatson" style="--jh:#DFA450">
           <span class="yr">2018 – 2020</span>
           <span class="co">AS Watson</span>
           <span class="rl">Innovation, chatbot platform</span>
         </a>
-        <a href="#experience" style="--jh:#AE94F0">
+        <a href="#role-asl" style="--jh:#AE94F0">
           <span class="yr">2020 – 2022</span>
           <span class="co">Automated Solutions</span>
           <span class="rl">Senior System Analyst (Lead)</span>
         </a>
-        <a href="#experience" style="--jh:#7FACF2">
+        <a href="#role-prudential" style="--jh:#7FACF2">
           <span class="yr">2022 – Now</span>
           <span class="co">Prudential Hong Kong</span>
           <span class="rl">Application Developer Lead</span>
@@ -671,13 +673,13 @@ footer p{font-size:12.5px;color:var(--muted)}
     <div class="sec-head reveal">
       <p class="label">Experience</p>
       <h2>Thirteen years building systems that had to stay up</h2>
-      <p>Selected work. Full history available on request or on LinkedIn.</p>
+      <p>Selected work, newest first. Click any role in the career path above to jump straight to it. Full history on request or on LinkedIn.</p>
     </div>
 
     <div class="roles">
 
       <!-- Employer marks: All employer marks use their logo files (assets/asl.png, assets/prudential.png, assets/aia.png, assets/pccw.png, assets/aswatson.png). To add a logo file, replace the monogram text with <img src="assets/NAME.png" alt="Employer name">. -->
-      <article class="role-item reveal slide" style="--hue:var(--blue)">
+      <article id="role-prudential" class="role-item reveal slide" style="--hue:var(--blue)">
         <div class="role-meta">
           <span class="role-date">Dec 2022 — Present</span>
           <span class="role-place">Hong Kong &amp; Vancouver</span>
@@ -707,7 +709,7 @@ footer p{font-size:12.5px;color:var(--muted)}
         </div>
       </article>
 
-      <article class="role-item reveal slide" style="--hue:var(--violet)">
+      <article id="role-asl" class="role-item reveal slide" style="--hue:var(--violet)">
         <div class="role-meta">
           <span class="role-date">Sep 2020 — Dec 2022</span>
           <span class="role-place">Hong Kong</span>
@@ -734,7 +736,7 @@ footer p{font-size:12.5px;color:var(--muted)}
         </div>
       </article>
 
-      <article class="role-item reveal slide" style="--hue:var(--amber)">
+      <article id="role-aswatson" class="role-item reveal slide" style="--hue:var(--amber)">
         <div class="role-meta">
           <span class="role-date">May 2018 — Sep 2020</span>
           <span class="role-place">Hong Kong</span>
@@ -760,7 +762,7 @@ footer p{font-size:12.5px;color:var(--muted)}
         </div>
       </article>
 
-      <article class="role-item reveal slide" style="--hue:var(--rose)">
+      <article id="role-aia" class="role-item reveal slide" style="--hue:var(--rose)">
         <div class="role-meta">
           <span class="role-date">Aug 2014 — Apr 2018</span>
           <span class="role-place">Hong Kong</span>
@@ -787,7 +789,7 @@ footer p{font-size:12.5px;color:var(--muted)}
         </div>
       </article>
 
-      <article class="role-item reveal slide" style="--hue:var(--green)">
+      <article id="role-pccw" class="role-item reveal slide" style="--hue:var(--green)">
         <div class="role-meta">
           <span class="role-date">2012 — 2014</span>
           <span class="role-place">Hong Kong</span>
@@ -811,7 +813,7 @@ footer p{font-size:12.5px;color:var(--muted)}
         </div>
       </article>
 
-      <article class="role-item reveal slide" style="--hue:var(--amber)">
+      <article id="role-cehl" class="role-item reveal slide" style="--hue:var(--amber)">
         <div class="role-meta">
           <span class="role-date">2010 — 2012</span>
           <span class="role-place">Hong Kong</span>
