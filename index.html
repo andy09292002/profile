@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- version_37: headline metrics are links to the role that backs each figure, so a recruiter can verify any number with one click -->
 <!-- version_34: nav section links show item counts (Experience 6, Skills 8, Projects 4), so a recruiter sees how much each section holds before scrolling -->
 <!-- version_33:skim navigation — career-path cards jump to their own role, the brand mark returns to the top, and the experience intro explains how to skim -->
 <!-- version_32: hero summary now mentions generative-AI features and the RAG-based GPT-4o chatbot -->
@@ -278,6 +279,8 @@ a.cta:hover{filter:brightness(1.08);transform:translateY(-1.5px);box-shadow:0 6p
 }
 .metric .fig em{font-style:normal;font-size:.6em;margin-left:1px}
 .metric .cap{font-size:12.5px;line-height:1.45;color:var(--on-panel-2)}
+/* metrics link to the evidence: the whole card is the target, no underline */
+a.metric{color:var(--on-panel);text-decoration:none}
 @media(max-width:760px){.metrics{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:360px){.metrics{grid-template-columns:1fr}}
 
@@ -654,22 +657,22 @@ footer p{font-size:12.5px;color:var(--muted)}
         </a>
       </nav>
       <div class="metrics rise r4">
-        <div class="metric" style="--mc:#5EEAD4">
+        <a class="metric" href="#experience" style="--mc:#5EEAD4" title="See the career timeline">
           <span class="fig"><span class="cnum" data-to="13" data-dec="0">13</span><em>yrs</em></span>
           <span class="cap">Enterprise engineering across five industries</span>
-        </div>
-        <div class="metric" style="--mc:#7DD3FC">
+        </a>
+        <a class="metric" href="#role-prudential" style="--mc:#7DD3FC" title="See the Prudential role">
           <span class="fig"><span class="cnum" data-to="30" data-dec="0">30</span><em>+</em></span>
           <span class="cap">Systems migrated to cloud with zero business impact</span>
-        </div>
-        <div class="metric" style="--mc:#A5B4FC">
+        </a>
+        <a class="metric" href="#role-prudential" style="--mc:#A5B4FC" title="See the Prudential role">
           <span class="fig"><span class="cnum" data-to="99.99" data-dec="2">99.99</span><em>%</em></span>
           <span class="cap">Uptime on a containerised platform, 24/7 year-round</span>
-        </div>
-        <div class="metric" style="--mc:#FCD34D">
+        </a>
+        <a class="metric" href="#role-prudential" style="--mc:#FCD34D" title="See the Prudential role">
           <span class="fig"><span class="cnum" data-to="6" data-dec="0">6</span><em>×</em></span>
           <span class="cap">Faster delivery after CI/CD rebuild — 1 week to 1 day</span>
-        </div>
+        </a>
       </div>
     </div>
   </div>
