@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version_9: certifications updated — AZ-900 and DP-900 completed -->
+<!-- version_10: mobile nav keeps section links reachable as a swipeable row, so a recruiter on a phone can jump to any section within a minute -->
 <!-- version_8: 60-second skim — availability status in the nav, plus a caption on the career-path strip so the arc is labelled at a glance -->
 <html lang="en">
 <head>
@@ -169,7 +169,13 @@ a.cta{
   transition:transform .2s var(--ease), box-shadow .2s ease, filter .2s ease;
 }
 a.cta:hover{filter:brightness(1.08);transform:translateY(-1.5px);box-shadow:0 6px 18px -6px rgba(13,148,136,.8);background:linear-gradient(135deg,#0D9488,#3B5BD9)}
-@media(max-width:760px){ .nav-links a:not(.cta){display:none} }
+/* mobile: keep section links reachable as a swipeable row, so a recruiter on a phone can jump straight to any section */
+@media(max-width:760px){
+  .nav-mark{display:none}
+  .nav-links{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;justify-content:flex-start}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{flex:0 0 auto;padding:7px 9px}
+}
 
 /* ============================================================
    4. HERO PANEL
