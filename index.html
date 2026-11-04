@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- version_22: added a personal project card for the Local LangChain Document Chatbot (side project) -->
 <!-- version_21: AS Watson chatbot on IBM Watson shown as a highlight chip in the role -->
 <!-- version_20: Prudential chatbot runs on GPT-4o; GPT-4o added to the role description and AI skills -->
 <!-- version_19: Prudential chatbot is described as a RAG system; RAG added to the role highlights and AI skills -->
@@ -899,6 +900,12 @@ footer p{font-size:12.5px;color:var(--muted)}
         <h3>Home Automation &amp; Workflow Bot</h3>
         <p>Scheduled n8n workflows that pull live data — stock prices, weather — on a daily cadence, then trigger home automation actions and push conditional notifications to a personal messenger.</p>
         <div class="stack"><span>n8n</span><span>Webhooks</span><span>Home automation</span></div>
+      </article>
+      <article class="card reveal d2" style="--hue:var(--violet)">
+        <div class="bar"></div>
+        <h3>Local LangChain Document Chatbot</h3>
+        <p>A self-hosted RAG chatbot for PDF, DOCX, TXT and HTML files. Answers come only from the user's own documents, and every quoted passage is checked against its source before it is shown. Uses hybrid vector and keyword search, supports Claude, OpenAI, xAI and Ollama, and includes a daily spend cap. Built with secret scanning and CI vulnerability checks.</p>
+        <div class="stack"><span>LangChain</span><span>RAG</span><span>FastAPI</span><span>Vue 3</span><span>Chroma</span><span>Docker</span></div>
       </article>
     </div>
   </section>
