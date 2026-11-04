@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- version_35: recruiter quick route — four numbered links (latest role, technical depth, side work, contact) under the career path so a recruiter can reach the key evidence within a minute -->
 <!-- version_34: nav section links show item counts (Experience 6, Skills 8, Projects 4), so a recruiter sees how much each section holds before scrolling -->
 <!-- version_33:skim navigation — career-path cards jump to their own role, the brand mark returns to the top, and the experience intro explains how to skim -->
 <!-- version_32: hero summary now mentions generative-AI features and the RAG-based GPT-4o chatbot -->
@@ -311,6 +312,27 @@ display:grid;grid-template-columns:repeat(6,1fr);gap:10px;
 @media(max-width:760px){.journey{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:360px){.journey{grid-template-columns:1fr}}
 
+/* quick route: four numbered entry points for a 60-second read */
+.route{padding-bottom:22px}
+.route-cap{
+  font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--on-panel-2);margin:0 0 10px;
+}
+.route-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.route-steps a{
+  display:flex;flex-direction:column;gap:5px;
+  padding:14px 14px 13px;border-radius:9px;min-width:0;
+  background:rgba(255,255,255,.05);border:1px solid var(--on-panel-line);
+  color:var(--on-panel);
+  transition:background-color .25s ease, transform .25s var(--ease);
+}
+.route-steps a:hover{background:rgba(255,255,255,.11);transform:translateY(-2px)}
+.route-steps .step{font-family:var(--serif);font-size:18px;font-weight:600;line-height:1;color:#7DE0DC}
+.route-steps .st{font-size:13.5px;font-weight:500;line-height:1.3}
+.route-steps .sd{font-size:12px;line-height:1.4;color:var(--on-panel-2)}
+@media(max-width:760px){.route-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:360px){.route-steps{grid-template-columns:1fr}}
+
 /* ============================================================
    5. SECTIONS
    ============================================================ */
@@ -546,7 +568,7 @@ footer p{font-size:12.5px;color:var(--muted)}
    7. PRINT
    ============================================================ */
 @media print{
-  .nav,.links,.cta,footer,.avail,.progress,.journey{display:none!important}
+  .nav,.links,.cta,footer,.avail,.progress,.journey,.route{display:none!important}
   body{background:#fff;color:#000;font-size:10.5pt}
   .panel,.panel::before{background:#fff!important;color:#000!important}
   .panel::after{display:none}
@@ -652,6 +674,15 @@ footer p{font-size:12.5px;color:var(--muted)}
           <span class="co">Prudential Hong Kong</span>
           <span class="rl">Application Developer Lead</span>
         </a>
+      </nav>
+      <nav class="route rise r4" aria-label="Quick route for recruiters">
+        <p class="route-cap">Quick route · about 60 seconds</p>
+        <div class="route-steps">
+          <a href="#role-prudential"><span class="step">1</span><span class="st">Latest role</span><span class="sd">Prudential Hong Kong: cloud migration and delivery results</span></a>
+          <a href="#skills"><span class="step">2</span><span class="st">Technical depth</span><span class="sd">Languages, cloud, integration, security and AI tooling</span></a>
+          <a href="#projects"><span class="step">3</span><span class="st">Side projects</span><span class="sd">Open-source work on GitHub</span></a>
+          <a href="#contact"><span class="step">4</span><span class="st">Get in touch</span><span class="sd">Email, LinkedIn and GitHub</span></a>
+        </div>
       </nav>
       <div class="metrics rise r4">
         <div class="metric" style="--mc:#5EEAD4">
